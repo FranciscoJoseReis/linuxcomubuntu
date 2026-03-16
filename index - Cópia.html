@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="PT">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Linux para iniciantes" />
+  <meta name="author" content="francisco Reis" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <title>linux com Ubuntu</title>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100;500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Saira:wght@100;500;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet" />
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/Style.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+  <!--Menu-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none" style="font-size: 1rem">
+        <em>Linux com <strong>Ubuntu</strong> </em>
+      </span>
+    </a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav text-light">
+        <li class="nav-item">
+          <div id="current_date" style="color: aliceblue; text-transform: lowercase"></div>
+          <script>
+            var data = moment()
+              .locale("pt-br")
+              .format("dddd, D [de] MMMM [de] YYYY");
+            document.getElementById("current_date").innerHTML = data;
+          </script>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#Inicio">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#Introducao">
+            Introdução
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#Parte_I">Parte I</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#Parte_II">Parte II</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#">Parte III</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#">Parte IV</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#">Parte V</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#">Parte VI</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#">Parte VII</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#">Parte VIII</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="">Conclusão</a>
+        </li>
+        <li class="small copyright-text">
+          Copyright&copy; 2026 | linux com Ubuntu | Designed by
+          <a href="https://franciscojosereis.github.io/portefolio/" target="\"
+            style="text-decoration: underline; color: aliceblue">
+            Francisco Reis
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--Corpo-->
+  <div class="container-fluid p-0">
+    <!--inicio-->
+    <section class="resume-section p-3 p-lg-5 flex-nowrap hero-section d-flex justify-content-center align-items-center"
+      id="Inicio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-12">
+            <h2 class="text-light mb-lg-3 mb-0">
+              <strong>
+                <em>linux com Ubuntu</em>
+              </strong>
+            </h2>
+            <br />
+          </div>
+        </div>
+      </div>
+    </section>
+     <!--Introducao-->
+    <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Introducao">
+      <div class="my-auto">
+        <header>
+          <h2 class="mb-0">
+            Capítulo 2
+            <span class="text-primary">Escolher a distribuição</span>
+          </h2>
+        </header>
+      
+       <article>
+         <p class="mb-1">Depois de compreender o que é o <strong>Linux</strong> e como funciona um <strong>sistema
+            operativo</strong>, surge uma pergunta muito comum entre quem está a começar: qual <strong>distribuição
+            Linux</strong> deve escolher? Ao pesquisar sobre Linux na internet, é normal encontrar muitos nomes
+          diferentes, como <strong>Ubuntu</strong>, <strong>Linux Mint</strong>, <strong>Debian</strong> ou
+          <strong>Fedora</strong>. Para quem está a iniciar, esta variedade pode parecer confusa.</p>
+
+        <p class="mb-1">Na realidade, esta diversidade é uma das grandes vantagens do <strong>Linux</strong>. Como se
+          trata de um sistema baseado em <strong>software livre</strong> e <strong>código aberto</strong>, qualquer
+          pessoa ou organização pode criar a sua própria versão do sistema, adaptando-o a diferentes necessidades.</p>
+
+        <p class="mb-1">Neste capítulo vamos explicar o que é uma <strong>distribuição Linux</strong>, porque existem
+          tantas versões diferentes e quais são algumas das mais conhecidas. Também iremos apresentar alguns critérios
+          simples que ajudam a escolher uma <strong>distribuição</strong> adequada para quem está a começar a utilizar
+          <strong>Linux</strong>.</p>
+       </article>
+<hr>
+        <article>
+          <h3 class="mb-0">2.1 O que é uma distribuição Linux</h3>
+
+        <p class="mb-1">Uma <strong>distribuição Linux</strong>, muitas vezes chamada simplesmente de
+          <strong>distro</strong>, é uma versão completa do <strong>sistema operativo Linux</strong>. Ela inclui o
+          <strong>kernel Linux</strong>, várias ferramentas do sistema, programas essenciais e normalmente um
+          <strong>ambiente gráfico</strong> que permite utilizar o computador de forma visual.</p>
+
+        <p class="mb-1">O <strong>kernel Linux</strong> é apenas a parte central do sistema, responsável por comunicar
+          diretamente com o <strong>hardware</strong> do computador. No entanto, para que o sistema seja realmente
+          utilizável, são necessários muitos outros componentes, como utilitários do sistema, gestores de pacotes,
+          aplicações e interfaces gráficas.</p>
+
+        <p class="mb-1">Uma <strong>distribuição Linux</strong> reúne todos esses componentes num conjunto organizado e
+          pronto a instalar. Assim, o utilizador não precisa de configurar tudo manualmente, pois a distribuição já
+          inclui as ferramentas necessárias para começar a utilizar o sistema.</p>
+
+        <p class="mb-1">Cada <strong>distribuição</strong> pode ter características diferentes. Algumas são mais simples
+          e pensadas para iniciantes, enquanto outras são mais técnicas e destinadas a utilizadores avançados ou
+          administradores de sistemas.</p>
+
+        </article>
+        <hr>
+        <article>
+            <h3 class="mb-0">2.2 Porque existem tantas distribuições</h3>
+
+        <p class="mb-1">Uma das primeiras coisas que surpreende quem descobre o <strong>Linux</strong> é o grande número
+          de <strong>distribuições Linux</strong> disponíveis. Existem centenas de versões diferentes, cada uma com
+          objetivos e características próprias.</p>
+
+        <p class="mb-1">Isto acontece porque o <strong>Linux</strong> é baseado em <strong>software livre</strong>. Isso
+          significa que qualquer pessoa pode utilizar o código do sistema, modificá-lo e criar uma nova distribuição
+          adaptada a determinadas necessidades.</p>
+
+        <p class="mb-1">Algumas <strong>distribuições Linux</strong> são criadas para serem muito fáceis de utilizar,
+          sendo ideais para quem está a começar. Outras são pensadas para <strong>servidores</strong>, <strong>segurança
+            informática</strong>, <strong>programação</strong> ou até para computadores com poucos recursos.</p>
+
+        <p class="mb-1">Apesar de existirem muitas distribuições, a maioria delas baseia-se em alguns projetos
+          principais. Por exemplo, várias distribuições populares são baseadas no <strong>Debian</strong> ou no
+          <strong>Fedora</strong>. Isto significa que partilham muitas características e utilizam tecnologias
+          semelhantes.</p>
+
+        <p class="mb-1">Esta diversidade permite que cada utilizador escolha uma <strong>distribuição Linux</strong> que
+          melhor se adapte ao seu estilo de utilização e às características do seu computador.</p>
+
+        </article>
+      <hr>
+      <article>
+        
+        <h3 class="mb-0">2.3 Distribuições Linux populares</h3>
+
+        <p class="mb-1">Entre as muitas <strong>distribuições Linux</strong> disponíveis, algumas tornaram-se
+          especialmente populares devido à sua facilidade de utilização, estabilidade e grande comunidade de
+          utilizadores.</p>
+
+        <p class="mb-1">Uma das distribuições mais conhecidas é o <strong>Ubuntu</strong>. Esta distribuição é muito
+          utilizada em todo o mundo e é frequentemente recomendada para iniciantes. O <strong>Ubuntu</strong> oferece
+          uma interface gráfica moderna, atualizações regulares e uma grande quantidade de <strong>software</strong>
+          disponível.</p>
+
+        <p class="mb-1">Outra distribuição bastante popular é o <strong>Linux Mint</strong>. Esta distribuição é baseada
+          no <strong>Ubuntu</strong> e foi criada com o objetivo de oferecer uma experiência simples e familiar,
+          especialmente para utilizadores que vêm do <strong>Windows</strong>.</p>
+
+        <p class="mb-1">O <strong>Debian</strong> é outra distribuição muito importante no mundo do
+          <strong>Linux</strong>. É conhecido pela sua grande estabilidade e serve como base para muitas outras
+          distribuições, incluindo o próprio <strong>Ubuntu</strong>.</p>
+
+        <p class="mb-1">Existe também o <strong>Fedora</strong>, uma distribuição moderna que costuma incluir
+          tecnologias recentes do mundo <strong>Linux</strong>. É frequentemente utilizada por programadores e
+          utilizadores mais avançados.</p>
+
+        <p class="mb-1">Estas são apenas algumas das muitas <strong>distribuições Linux</strong> disponíveis. No
+          entanto, para quem está a começar, é geralmente recomendado escolher uma distribuição simples e bem
+          documentada.</p>
+
+      </article>
+      <hr>
+      <article>
+          <h3 class="mb-0">2.4 Como escolher uma distribuição</h3>
+
+        <p class="mb-1">Escolher uma <strong>distribuição Linux</strong> pode parecer difícil no início, mas na prática
+          o processo pode ser bastante simples. A primeira coisa a considerar é o nível de experiência do utilizador.
+        </p>
+
+        <p class="mb-1">Para quem está a começar, é aconselhável escolher uma distribuição que seja conhecida por ser
+          fácil de instalar e utilizar. Distribuições como o <strong>Ubuntu</strong> ou o <strong>Linux Mint</strong>
+          são frequentemente recomendadas porque possuem uma interface intuitiva e uma grande quantidade de tutoriais
+          disponíveis.</p>
+
+        <p class="mb-1">Outro fator importante é o <strong>hardware</strong> do computador. Alguns computadores mais
+          antigos podem funcionar melhor com distribuições mais leves, enquanto máquinas mais recentes podem executar
+          sistemas mais completos sem dificuldade.</p>
+
+        <p class="mb-1">Também é importante considerar o tamanho da <strong>comunidade</strong> da distribuição. Uma
+          comunidade ativa significa que existem mais <strong>fóruns</strong>, <strong>documentação</strong> e
+          <strong>tutoriais</strong> disponíveis para ajudar em caso de dúvidas ou problemas.</p>
+
+        <p class="mb-1">Para este guia, iremos utilizar o <strong>Ubuntu</strong>, pois é uma das distribuições mais
+          populares e mais recomendadas para quem deseja começar a explorar o mundo do <strong>Linux</strong>.</p>
+
+      </article>
+      
+      </div>
+      <!--Fim-->
+    </section>
+    <!--Parte_I-->
+  </div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+</body>
+
+</html>
