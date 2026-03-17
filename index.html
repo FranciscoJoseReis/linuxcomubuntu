@@ -1,771 +1,1021 @@
 <!doctype html>
 <html lang="PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Linux para iniciantes" />
+    <meta name="author" content="francisco Reis" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>linux com Ubuntu</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom fonts for this template -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:wght@100;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Saira:wght@100;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="vendor/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet" />
+    <link
+      href="vendor/simple-line-icons/css/simple-line-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="css/Style.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="Linux para iniciantes" />
-  <meta name="author" content="francisco Reis" />
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <title>linux com Ubuntu</title>
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
-    rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100;500;700;800&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
-    rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Saira:wght@100;500;700;800&display=swap"
-    rel="stylesheet" />
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-  <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet" />
-  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" />
-  <!-- Custom styles for this template -->
-  <link href="css/Style.css" rel="stylesheet" />
-</head>
-
-<body id="page-top">
-  <!--Menu-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none" style="font-size: 1rem">
-        <em>Linux com <strong>Ubuntu</strong> </em>
-      </span>
-    </a>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav text-light">
-        <li class="nav-item">
-          <div id="current_date" style="color: aliceblue; text-transform: lowercase"></div>
-          <script>
-            var data = moment()
-              .locale("pt-br")
-              .format("dddd, D [de] MMMM [de] YYYY");
-            document.getElementById("current_date").innerHTML = data;
-          </script>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#Inicio">Início</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#Introducao">
-            Introdução
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#Parte_I">Parte I</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#Parte_II">Parte II</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#Parte_III">Parte III</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#Parte_IV">Parte IV</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#Parte_V">Parte V</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#Parte_VI">Parte VI</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#Parte_VII">Parte VII</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#Parte_VIII">Parte VIII</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#Conclusao">Conclusão</a>
-        </li>
-        <li class="small copyright-text">
-          Copyright&copy; 2026 | linux com Ubuntu | Designed by
-          <a href="https://franciscojosereis.github.io/portefolio/" target="\"
-            style="text-decoration: underline; color: aliceblue">
-            Francisco Reis
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <!--Corpo-->
-  <div class="container-fluid p-0">
-    <!--inicio-->
-    <section class="resume-section p-3 p-lg-5 flex-nowrap hero-section d-flex justify-content-center align-items-center"
-      id="Inicio">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-12">
-            <h2 class="text-light mb-lg-3 mb-0">
-              <strong>
-                <em>(WIP)linux com Ubuntu</em>
-              </strong>
-            </h2>
-            <br />
+  <body id="page-top">
+    <!--Menu-->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+      id="sideNav"
+    >
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none" style="font-size: 1rem">
+          <em>Linux com <strong>Ubuntu</strong> </em>
+        </span>
+      </a>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav text-light">
+          <li class="nav-item">
+            <div
+              id="current_date"
+              style="color: aliceblue; text-transform: lowercase"
+            ></div>
+            <script>
+              var data = moment()
+                .locale("pt-br")
+                .format("dddd, D [de] MMMM [de] YYYY");
+              document.getElementById("current_date").innerHTML = data;
+            </script>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Inicio">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Introducao">
+              Introdução
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Parte_I">Parte I</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Parte_II">Parte II</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Parte_III"
+              >Parte III</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Parte_IV">Parte IV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Parte_V">Parte V</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Parte_VI">Parte VI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Parte_VII"
+              >Parte VII</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Parte_VIII"
+              >Parte VIII</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Conclusao"
+              >Conclusão</a
+            >
+          </li>
+          <li class="small copyright-text">
+            Copyright&copy; 2026 | linux com Ubuntu | Designed by
+            <a
+              href="https://franciscojosereis.github.io/portefolio/"
+              target="\"
+              style="text-decoration: underline; color: aliceblue"
+            >
+              Francisco Reis
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Corpo-->
+    <div class="container-fluid p-0">
+      <!--inicio-->
+      <section
+        class="resume-section p-3 p-lg-5 flex-nowrap hero-section d-flex justify-content-center align-items-center"
+        id="Inicio"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-12">
+              <h2 class="text-light mb-lg-3 mb-0">
+                <strong>
+                  <em>(WIP)linux com Ubuntu</em>
+                </strong>
+              </h2>
+              <br />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!--Introducao-->
-    <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Introducao">
-      <div class="my-auto">
-        <header>
-          <h2 class="mb-0">
-            Introdução
-            <span class="text-primary"></span>
-          </h2>
-        </header>
-        <article>
-          <h3 class="mb-0">Apresentação</h3>
+      </section>
+      <!--Introducao-->
+      <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Introducao">
+        <div class="my-auto">
+          <header>
+            <h2 class="mb-0">
+              Introdução
+              <span class="text-primary"></span>
+            </h2>
+          </header>
+          <article>
+            <h3 class="mb-0">Apresentação</h3>
+            <p class="mb-1">
+              Este <strong>guia sobre Linux e Ubuntu</strong> foi criado para
+              ajudar qualquer pessoa a compreender e começar a utilizar o
+              <strong>sistema operativo Linux</strong> de forma simples e
+              prática. Muitas pessoas têm curiosidade sobre o
+              <strong>Linux</strong>, mas não sabem por onde começar. Este livro
+              procura responder a essa necessidade, explicando passo a passo os
+              conceitos essenciais e mostrando como instalar e utilizar o
+              <strong>Ubuntu</strong>, uma das distribuições Linux mais
+              populares do mundo.
+            </p>
+            <p class="mb-1">
+              Ao longo deste guia serão apresentados os conceitos fundamentais
+              sobre <strong>Linux</strong>, desde o que é um
+              <strong>sistema operativo</strong> até ao processo completo de
+              <strong>instalação do Ubuntu</strong> num computador. Também serão
+              abordados os primeiros passos após a instalação, a utilização do
+              <strong>ambiente gráfico</strong>, a instalação de
+              <strong>programas</strong>, a gestão de
+              <strong>ficheiros</strong> e uma introdução ao
+              <strong>terminal</strong>. O objetivo é permitir que qualquer
+              leitor consiga começar a utilizar <strong>Linux</strong> com
+              confiança.
+            </p>
+            <p class="mb-1">
+              Este guia foi escrito com uma abordagem prática e pedagógica. Cada
+              capítulo apresenta explicações claras, exemplos e orientações que
+              ajudam a compreender melhor o funcionamento do
+              <strong>Linux</strong>. Mesmo que nunca tenha utilizado este
+              sistema antes, poderá acompanhar os conteúdos sem dificuldade.
+            </p>
+            <p class="mb-0">
+              O mundo do <strong>software livre</strong> é vasto e cheio de
+              possibilidades. Ao aprender a utilizar <strong>Linux</strong>,
+              está também a entrar num ecossistema tecnológico baseado na
+              <strong>colaboração</strong>, na
+              <strong>partilha de conhecimento</strong> e na liberdade de
+              utilizar e modificar o <strong>software</strong>. Este guia
+              pretende ser o primeiro passo nessa descoberta.
+            </p>
+            <p>
+              Esperamos que este livro o ajude a compreender melhor o
+              <strong>Linux</strong>, a instalar o <strong>Ubuntu</strong> no
+              seu computador e a sentir-se confortável ao utilizar este poderoso
+              <strong>sistema operativo</strong>.
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h4 class="mb-0">1. Introdução ao guia</h4>
+            <p class="mb-1">
+              Este guia foi criado para servir como uma
+              <strong>introdução prática ao Linux</strong>, especialmente para
+              pessoas que nunca utilizaram este sistema operativo. Muitas vezes,
+              quem ouve falar em <strong>Linux</strong> pensa que se trata de
+              algo complicado ou destinado apenas a especialistas em
+              informática. No entanto, atualmente existem distribuições Linux,
+              como o <strong>Ubuntu</strong>, que são muito fáceis de utilizar.
+            </p>
+            <p class="mb-1">
+              O objetivo deste guia é explicar, de forma simples e organizada,
+              como funciona o <strong>Linux</strong> e como qualquer pessoa pode
+              instalá-lo e utilizá-lo no seu computador. O conteúdo foi
+              estruturado em várias partes, começando pelos conceitos mais
+              básicos e avançando gradualmente para temas mais práticos.
+            </p>
+            <p class="mb-1">
+              Ao longo do livro, o leitor irá aprender não apenas a instalar o
+              <strong>Ubuntu</strong>, mas também a compreender como funciona um
+              <strong>sistema operativo</strong>, como instalar
+              <strong>programas</strong>, como gerir
+              <strong>ficheiros</strong> e como utilizar o
+              <strong>terminal</strong>. Este conhecimento permite utilizar o
+              computador de forma mais eficiente e compreender melhor o
+              funcionamento do sistema.
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h4 class="mb-0">2. A quem se destina este livro</h4>
+            <p class="mb-1">
+              Este livro foi pensado principalmente para
+              <strong>utilizadores iniciantes</strong> que desejam aprender a
+              utilizar <strong>Linux</strong> pela primeira vez. Não é
+              necessário ter conhecimentos avançados de informática para
+              acompanhar este guia. Basta ter alguma familiaridade básica com a
+              utilização de um <strong>computador</strong>.
+            </p>
+            <p class="mb-1">
+              Também pode ser útil para utilizadores que já utilizam sistemas
+              como
+              <strong>Windows</strong> ou <strong>macOS</strong> e querem
+              experimentar o <strong>Linux</strong>. Muitos leitores procuram
+              uma alternativa gratuita, segura e estável para o seu sistema
+              atual, e o <strong>Ubuntu</strong> pode ser uma excelente escolha.
+            </p>
+            <p class="mb-1">
+              Além disso, este guia pode ser útil para estudantes, curiosos de
+              tecnologia ou qualquer pessoa interessada em compreender melhor o
+              mundo do <strong>software livre</strong> e das
+              <strong>distribuições Linux</strong>.
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h4 class="mb-0">3. O que vai aprender</h4>
+            <p class="mb-1">
+              Ao longo deste guia, o leitor irá adquirir uma compreensão sólida
+              sobre o funcionamento do
+              <strong>Linux</strong> e aprenderá a realizar várias tarefas
+              importantes. Uma das primeiras aprendizagens será compreender o
+              que é um <strong>sistema operativo</strong> e qual é o papel do
+              <strong>Linux</strong> no funcionamento de um computador.
+            </p>
+            <p>
+              Também irá conhecer o conceito de
+              <strong>distribuições Linux</strong> e perceber porque existem
+              tantas opções diferentes. O guia irá explicar como escolher uma
+              distribuição adequada para iniciantes e porque o
+              <strong>Ubuntu</strong> foi escolhido como exemplo principal.
+            </p>
+            <p class="mb-1">
+              Outra parte importante será dedicada ao processo de
+              <strong>instalação do Ubuntu</strong>. O leitor irá aprender como
+              preparar o computador, criar uma
+              <strong>pen USB de instalação</strong>, iniciar o sistema a partir
+              dessa USB e concluir todo o processo de instalação.
+            </p>
+            <p class="mb-1">
+              Depois da instalação, serão apresentados os
+              <strong>primeiros passos no Ubuntu</strong>, incluindo a
+              exploração do <strong>ambiente de trabalho</strong>, a instalação
+              de <strong>programas</strong>, a gestão de
+              <strong>ficheiros</strong> e a utilização do
+              <strong>terminal</strong>. Também serão abordados temas
+              relacionados com <strong>segurança</strong>,
+              <strong>atualizações</strong> e resolução de
+              <strong>problemas comuns</strong>.
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h4 class="mb-0">4. Como utilizar este guia</h4>
+            <p class="mb-1">
+              Este guia foi organizado de forma progressiva, permitindo que o
+              leitor avance passo a passo na aprendizagem do
+              <strong>Linux</strong>. Cada capítulo aborda um tema específico e
+              foi pensado para ser compreendido mesmo por quem está a começar.
+            </p>
+            <p class="mb-1">
+              Recomenda-se que o livro seja lido pela ordem apresentada no
+              índice, pois os conceitos explicados nos primeiros capítulos
+              ajudam a compreender melhor os temas abordados mais à frente. Por
+              exemplo, antes de instalar o
+              <strong>Ubuntu</strong>, é importante compreender o que é uma
+              <strong>distribuição Linux</strong> e como funciona o
+              <strong>arranque do computador</strong>.
+            </p>
+            <p class="mb-1">
+              No entanto, este guia também pode ser utilizado como um
+              <strong>manual de consulta</strong>. Se o leitor já tiver
+              instalado o <strong>Ubuntu</strong>, pode avançar diretamente para
+              os capítulos que explicam como instalar
+              <strong>programas</strong>, gerir <strong>ficheiros</strong> ou
+              utilizar o <strong>terminal</strong>.
+            </p>
+            <p class="mb-1">
+              O mais importante é utilizar este guia como uma ferramenta de
+              aprendizagem. Experimentar, testar e explorar o
+              <strong>Linux</strong> é uma das melhores formas de compreender o
+              seu funcionamento e descobrir todo o potencial deste poderoso
+              <strong>sistema operativo</strong>.
+            </p>
+          </article>
+        </div>
+        <!--Fim-->
+      </section>
+      <!--Parte_I-->
+      <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_I">
+        <div class="my-auto">
+          <header>
+            <h2 class="mb-0">
+              Parte I -
+              <span class="text-primary">Compreender o Linux</span>
+            </h2>
+          </header>
+          <article>
+            <p class="mb-1">
+              Nesta primeira parte do guia vamos começar por compreender os
+              conceitos fundamentais relacionados com o <strong>Linux</strong>.
+              Antes de instalar ou utilizar qualquer sistema, é importante
+              perceber o que ele é, como funciona e qual é o seu papel no
+              funcionamento de um <strong>computador</strong>.
+            </p>
+
+            <p class="mb-1">
+              Muitas pessoas utilizam diariamente um
+              <strong>sistema operativo</strong>, como
+              <strong>Windows</strong> ou <strong>macOS</strong>, sem pensar
+              muito sobre o que ele realmente faz. No entanto, o sistema
+              operativo é um dos elementos mais importantes de qualquer
+              computador, pois é ele que permite utilizar programas, gerir
+              ficheiros e controlar o hardware.
+            </p>
+
+            <p class="mb-1">
+              Ao longo deste capítulo iremos aprender o que é um
+              <strong>sistema operativo</strong>, o que é o
+              <strong>Linux</strong>, como surgiu e porque se tornou tão
+              importante no mundo da tecnologia. Também iremos conhecer o
+              conceito de <strong>software livre</strong>, perceber o que são as
+              <strong>distribuições Linux</strong> e descobrir onde este sistema
+              é utilizado atualmente.
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h3 class="mb-0">Capítulo 1 - O que é Linux</h3>
+
+            <p class="mb-1">
+              Antes de instalar ou utilizar o <strong>Linux</strong>, é
+              importante compreender o que ele é e como funciona dentro de um
+              <strong>computador</strong>. Muitas pessoas pensam que o Linux é
+              apenas um programa ou uma aplicação, mas na realidade trata-se de
+              algo muito mais fundamental.
+            </p>
+
+            <p class="mb-1">
+              O <strong>Linux</strong> faz parte do conjunto de componentes que
+              permitem que um computador funcione corretamente. Ele controla a
+              comunicação entre o <strong>hardware</strong> e o
+              <strong>software</strong>, permitindo que o utilizador execute
+              programas, utilize dispositivos e realize várias tarefas no
+              sistema.
+            </p>
+
+            <p class="m-1">
+              Neste capítulo iremos começar por compreender o que é um
+              <strong>sistema operativo</strong>, pois esse conceito é essencial
+              para perceber o papel do <strong>Linux</strong>. Depois iremos
+              explorar a história do sistema, conhecer o conceito de
+              <strong>software livre</strong> e entender porque existem tantas
+              versões diferentes de <strong>Linux</strong>.
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h4 class="mb-0">1.1. O que é um sistema operativo</h4>
+            <p class="mb-1">
+              Um <strong>sistema operativo</strong> é o programa principal que
+              permite que um <strong>computador</strong> funcione e seja
+              utilizado pelas pessoas. Sem um sistema operativo, o computador
+              não seria capaz de executar programas, mostrar imagens no ecrã ou
+              permitir que o utilizador interaja com a máquina.
+            </p>
+
+            <p class="mb-1">
+              O <strong>sistema operativo</strong> funciona como um
+              intermediário entre o <strong>hardware</strong> e o
+              <strong>utilizador</strong>. O hardware inclui todos os
+              componentes físicos do computador, como o
+              <strong>processador</strong>, a <strong>memória</strong>, o
+              <strong>disco rígido</strong>, o <strong>teclado</strong> e o
+              <strong>monitor</strong>. O sistema operativo gere estes
+              componentes e permite que os programas os utilizem.
+            </p>
+
+            <p class="mb-1">
+              Quando abre um <strong>programa</strong>, como um navegador de
+              internet ou um editor de texto, é o
+              <strong>sistema operativo</strong> que coordena tudo o que
+              acontece em segundo plano. Ele gere a memória, organiza os
+              ficheiros no disco e controla a comunicação entre os diferentes
+              programas.
+            </p>
+
+            <p class="mb-1">
+              Existem vários tipos de <strong>sistemas operativos</strong>.
+              Alguns dos mais conhecidos são o <strong>Windows</strong>, o
+              <strong>macOS</strong> e o <strong>Linux</strong>. Cada um deles
+              tem características próprias, mas todos desempenham a mesma função
+              principal: permitir que o utilizador utilize o computador de forma
+              simples e eficiente.
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h4 class="mb-0">1.2. O que é Linux</h4>
+
+            <p class="mb-1">
+              O <strong>Linux</strong> é um tipo de
+              <strong>sistema operativo</strong> que foi criado para ser livre,
+              flexível e adaptável a diferentes tipos de computadores. Ao
+              contrário de alguns sistemas proprietários, o
+              <strong>Linux</strong> pode ser utilizado, estudado e modificado
+              por qualquer pessoa.
+            </p>
+
+            <p class="mb-1">
+              Na realidade, quando se fala em <strong>Linux</strong>, muitas
+              vezes estamos a referir-nos ao <strong>kernel Linux</strong>. O
+              <strong>kernel</strong> é a parte central do sistema operativo
+              responsável por comunicar diretamente com o
+              <strong>hardware</strong> do computador. Ele gere recursos como o
+              <strong>processador</strong>, a <strong>memória</strong> e os
+              dispositivos ligados ao sistema.
+            </p>
+
+            <p class="mb-1">
+              No entanto, para que o sistema seja completo, o
+              <strong>kernel Linux</strong> precisa de ser combinado com outros
+              programas e ferramentas. É essa combinação que forma aquilo que
+              normalmente chamamos de <strong>distribuição Linux</strong>.
+            </p>
+
+            <p class="mb-1">
+              Atualmente, o <strong>Linux</strong> é utilizado em milhões de
+              computadores em todo o mundo. É conhecido por ser um sistema
+              <strong>seguro</strong>, <strong>estável</strong> e muito
+              utilizado em <strong>servidores</strong>, mas também pode ser
+              usado em computadores pessoais.
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h4 class="mb-0">1.3. História do Linux</h4>
+
+            <p class="mb-1">
+              A história do <strong>Linux</strong> começa no início da década de
+              1990. Em 1991, um estudante finlandês chamado
+              <strong>Linus Torvalds</strong> começou a desenvolver um novo
+              <strong>kernel</strong> para computadores pessoais. O objetivo
+              inicial era criar um sistema semelhante ao <strong>Unix</strong>,
+              mas que pudesse ser utilizado livremente.
+            </p>
+
+            <p class="mb-1">
+              Linus Torvalds partilhou o seu trabalho na internet e convidou
+              outros programadores a colaborar no desenvolvimento do projeto.
+              Rapidamente, programadores de várias partes do mundo começaram a
+              contribuir com melhorias, correções e novas funcionalidades.
+            </p>
+
+            <p class="mb-1">
+              Graças a esta colaboração global, o <strong>Linux</strong> evoluiu
+              rapidamente e tornou-se num dos sistemas operativos mais
+              importantes do mundo. Ao longo dos anos, muitas empresas,
+              organizações e programadores independentes contribuíram para o
+              desenvolvimento do sistema.
+            </p>
+
+            <p class="mb-1">
+              Hoje, o <strong>Linux</strong> é utilizado em servidores,
+              computadores pessoais, dispositivos móveis, supercomputadores e
+              até em equipamentos eletrónicos como routers e televisores
+              inteligentes.
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h4 class="mb-0">1.4. ‘Software’ livre e código aberto</h4>
+
+            <p class="mb-1">
+              Uma das características mais importantes do
+              <strong>Linux</strong> é o facto de fazer parte do mundo do
+              <strong>software livre</strong>. Este conceito significa que o
+              <strong>software</strong> pode ser utilizado, estudado, modificado
+              e distribuído livremente.
+            </p>
+
+            <p class="mb-1">
+              O <strong>software livre</strong> baseia-se na ideia de que os
+              utilizadores devem ter liberdade para compreender como um programa
+              funciona e adaptá-lo às suas necessidades. Para isso, o
+              <strong>código-fonte</strong> do programa é disponibilizado
+              publicamente.
+            </p>
+
+            <p class="mb-1">
+              O termo <strong>código aberto</strong>, também conhecido como
+              <strong>open source</strong>, está relacionado com esta filosofia.
+              Programas de <strong>código aberto</strong> permitem que
+              programadores de todo o mundo participem no desenvolvimento,
+              corrigindo erros e criando novas funcionalidades.
+            </p>
+
+            <p class="mb-1">
+              O <strong>Linux</strong> é um dos exemplos mais conhecidos de
+              <strong>software livre</strong> e de
+              <strong>código aberto</strong>. Esta abordagem colaborativa ajudou
+              o sistema a crescer rapidamente e a tornar-se extremamente robusto
+              e confiável.
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h4 class="mb-0">1.5. O que é uma distribuição Linux</h4>
+
+            <p class="mb-1">
+              Uma <strong>distribuição Linux</strong> é uma versão completa do
+              sistema que inclui o <strong>kernel Linux</strong>, programas,
+              ferramentas e um <strong>ambiente gráfico</strong>. Cada
+              distribuição é criada por uma comunidade ou organização que decide
+              quais os componentes a incluir.
+            </p>
+
+            <p class="mb-1">
+              Existem centenas de <strong>distribuições Linux</strong>, cada uma
+              com objetivos e características diferentes. Algumas são pensadas
+              para iniciantes, outras para servidores, e algumas são criadas
+              para utilizadores mais avançados.
+            </p>
+
+            <p class="mb-1">
+              Entre as distribuições mais conhecidas encontram-se o
+              <strong>Ubuntu</strong>, o <strong>Debian</strong>, o
+              <strong>Fedora</strong> e o <strong>Linux Mint</strong>. Todas
+              utilizam o <strong>kernel Linux</strong>, mas podem ter interfaces
+              e ferramentas diferentes.
+            </p>
+
+            <p class="mb-1">
+              Neste guia iremos utilizar o <strong>Ubuntu</strong>, porque é uma
+              das distribuições mais populares e mais fáceis de utilizar para
+              quem está a começar a aprender <strong>Linux</strong>.
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h4 class="mb-0">1.6. Onde o Linux é utilizado</h4>
+
+            <p class="mb-1">
+              O <strong>Linux</strong> é utilizado em muitos tipos de
+              dispositivos e sistemas em todo o mundo. Embora muitas pessoas o
+              utilizem em computadores pessoais, a sua presença é muito maior em
+              outras áreas da tecnologia.
+            </p>
+
+            <p class="mb-1">
+              Grande parte dos <strong>servidores de internet</strong> utilizam
+              <strong>Linux</strong>. Isto inclui servidores que alojam
+              websites, serviços online e plataformas digitais. A sua
+              estabilidade e segurança tornam-no uma escolha popular para
+              empresas e organizações.
+            </p>
+
+            <p class="mb-1">
+              O <strong>Linux</strong> também é utilizado em
+              <strong>supercomputadores</strong>, que são máquinas extremamente
+              poderosas usadas em investigação científica e simulações
+              complexas.
+            </p>
+
+            <p class="mb-1">
+              Além disso, muitos dispositivos do dia a dia utilizam versões
+              adaptadas do <strong>Linux</strong>, como
+              <strong>routers</strong>,
+              <strong>televisores inteligentes</strong> e sistemas operativos
+              móveis como o <strong>Android</strong>.
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h4 class="mb-0">1.7. O papel da comunidade</h4>
+
+            <p class="mb-1">
+              Uma das grandes forças do <strong>Linux</strong> é a sua
+              <strong>comunidade</strong>. Ao contrário de muitos sistemas
+              proprietários, o desenvolvimento do Linux envolve milhares de
+              programadores, utilizadores e voluntários em todo o mundo.
+            </p>
+
+            <p class="mb-1">
+              A <strong>comunidade Linux</strong> contribui para melhorar o
+              sistema de várias formas. Programadores criam novas
+              funcionalidades, especialistas em segurança corrigem
+              vulnerabilidades e utilizadores ajudam a testar novas versões.
+            </p>
+
+            <p class="mb-1">
+              Além disso, a comunidade também produz uma grande quantidade de
+              <strong>documentação</strong>, <strong>tutoriais</strong> e
+              <strong>fóruns de ajuda</strong>. Isto facilita muito a
+              aprendizagem, pois os utilizadores podem encontrar respostas para
+              muitas dúvidas na internet.
+            </p>
+
+            <p class="mb-1">
+              Esta cultura de colaboração e partilha é um dos elementos que
+              tornam o
+              <strong>Linux</strong> um projeto único no mundo da tecnologia.
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h4 class="mb-0">1.8. Resumo do capítulo</h4>
+
+            <p class="mb-1">
+              Neste capítulo aprendemos vários conceitos fundamentais para
+              compreender o <strong>Linux</strong>. Começámos por perceber o que
+              é um <strong>sistema operativo</strong> e qual é o seu papel no
+              funcionamento de um <strong>computador</strong>.
+            </p>
+
+            <p class="mb-1">
+              Também descobrimos que o <strong>Linux</strong> é um sistema
+              baseado num <strong>kernel</strong> desenvolvido por
+              <strong>Linus Torvalds</strong> e que evoluiu graças à colaboração
+              de milhares de programadores em todo o mundo.
+            </p>
+
+            <p class="mb-1">
+              Outro conceito importante foi o de
+              <strong>software livre</strong> e <strong>código aberto</strong>,
+              que permite que qualquer pessoa utilize, estude e modifique o
+              <strong>software</strong>.
+            </p>
+
+            <p class="mb-1">
+              Por fim, vimos que existem muitas
+              <strong>distribuições Linux</strong> e que o sistema é utilizado
+              em vários tipos de dispositivos, desde
+              <strong>servidores</strong> até
+              <strong>supercomputadores</strong> e equipamentos eletrónicos.
+            </p>
+
+            <p class="mb-1">
+              No próximo capítulo iremos aprender mais sobre as
+              <strong>distribuições Linux</strong> e descobrir como escolher a
+              mais adequada para começar a utilizar este poderoso
+              <strong>sistema operativo</strong>.
+            </p>
+          </article>
+          <hr style="height: 4px; border: none; background-color: black" />
+
+          <article>
+            <h3 class="mb-0">Capítulo 2 - Escolher a distribuição</h3>
+
+            <p class="mb-1">
+              Depois de compreender o que é o <strong>Linux</strong> e como
+              funciona um <strong>sistema operativo</strong>, surge uma pergunta
+              muito comum entre quem está a começar: qual
+              <strong>distribuição Linux</strong> deve escolher? Ao pesquisar
+              sobre Linux na internet, é normal encontrar muitos nomes
+              diferentes, como <strong>Ubuntu</strong>,
+              <strong>Linux Mint</strong>, <strong>Debian</strong> ou
+              <strong>Fedora</strong>. Para quem está a iniciar, esta variedade
+              pode parecer confusa.
+            </p>
+
+            <p class="mb-1">
+              Na realidade, esta diversidade é uma das grandes vantagens do
+              <strong>Linux</strong>. Como se trata de um sistema baseado em
+              <strong>software livre</strong> e <strong>código aberto</strong>,
+              qualquer pessoa ou organização pode criar a sua própria versão do
+              sistema, adaptando-o a diferentes necessidades.
+            </p>
+
+            <p class="mb-1">
+              Neste capítulo vamos explicar o que é uma
+              <strong>distribuição Linux</strong>, porque existem tantas versões
+              diferentes e quais são algumas das mais conhecidas. Também iremos
+              apresentar alguns critérios simples que ajudam a escolher uma
+              <strong>distribuição</strong> adequada para quem está a começar a
+              utilizar <strong>Linux</strong>.
+            </p>
+          </article>
+          <hr />
+
+          <article>
+            <h4 class="mb-0">2.1. O que é uma distribuição Linux</h4>
+
+            <p class="mb-1">
+              Uma <strong>distribuição Linux</strong>, muitas vezes chamada
+              simplesmente de <strong>distro</strong>, é uma versão completa do
+              <strong>sistema operativo Linux</strong>. Ela inclui o
+              <strong>kernel Linux</strong>, várias ferramentas do sistema,
+              programas essenciais e normalmente um
+              <strong>ambiente gráfico</strong> que permite utilizar o
+              computador de forma visual.
+            </p>
+
+            <p class="mb-1">
+              O <strong>kernel Linux</strong> é apenas a parte central do
+              sistema, responsável por comunicar diretamente com o
+              <strong>hardware</strong> do computador. No entanto, para que o
+              sistema seja realmente utilizável, são necessários muitos outros
+              componentes, como utilitários do sistema, gestores de pacotes,
+              aplicações e interfaces gráficas.
+            </p>
+
+            <p class="mb-1">
+              Uma <strong>distribuição Linux</strong> reúne todos esses
+              componentes num conjunto organizado e pronto a instalar. Assim, o
+              utilizador não precisa de configurar tudo manualmente, pois a
+              distribuição já inclui as ferramentas necessárias para começar a
+              utilizar o sistema.
+            </p>
+
+            <p class="mb-1">
+              Cada <strong>distribuição</strong> pode ter características
+              diferentes. Algumas são mais simples e pensadas para iniciantes,
+              enquanto outras são mais técnicas e destinadas a utilizadores
+              avançados ou administradores de sistemas.
+            </p>
+          </article>
+          <hr />
+          <article>
+            <h4 class="mb-0">2.2. Porque existem tantas distribuições</h4>
+
+            <p class="mb-1">
+              Uma das primeiras coisas que surpreende quem descobre o
+              <strong>Linux</strong> é o grande número de
+              <strong>distribuições Linux</strong> disponíveis. Existem centenas
+              de versões diferentes, cada uma com objetivos e características
+              próprias.
+            </p>
+
+            <p class="mb-1">
+              Isto acontece porque o <strong>Linux</strong> é baseado em
+              <strong>software livre</strong>. Isso significa que qualquer
+              pessoa pode utilizar o código do sistema, modificá-lo e criar uma
+              nova distribuição adaptada a determinadas necessidades.
+            </p>
+
+            <p class="mb-1">
+              Algumas <strong>distribuições Linux</strong> são criadas para
+              serem muito fáceis de utilizar, sendo ideais para quem está a
+              começar. Outras são pensadas para <strong>servidores</strong>,
+              <strong>segurança informática</strong>,
+              <strong>programação</strong> ou até para computadores com poucos
+              recursos.
+            </p>
+
+            <p class="mb-1">
+              Apesar de existirem muitas distribuições, a maioria delas
+              baseia-se em alguns projetos principais. Por exemplo, várias
+              distribuições populares são baseadas no <strong>Debian</strong> ou
+              no <strong>Fedora</strong>. Isto significa que partilham muitas
+              características e utilizam tecnologias semelhantes.
+            </p>
+
+            <p class="mb-1">
+              Esta diversidade permite que cada utilizador escolha uma
+              <strong>distribuição Linux</strong> que melhor se adapte ao seu
+              estilo de utilização e às características do seu computador.
+            </p>
+          </article>
+          <hr />
+
+          <article>
+            <h4 class="mb-0">2.3. Distribuições Linux populares</h4>
+
+            <p class="mb-1">
+              Entre as muitas <strong>distribuições Linux</strong> disponíveis,
+              algumas tornaram-se especialmente populares devido à sua
+              facilidade de utilização, estabilidade e grande comunidade de
+              utilizadores.
+            </p>
+
+            <p class="mb-1">
+              Uma das distribuições mais conhecidas é o <strong>Ubuntu</strong>.
+              Esta distribuição é muito utilizada em todo o mundo e é
+              frequentemente recomendada para iniciantes. O
+              <strong>Ubuntu</strong> oferece uma interface gráfica moderna,
+              atualizações regulares e uma grande quantidade de
+              <strong>software</strong> disponível.
+            </p>
+
+            <p class="mb-1">
+              Outra distribuição bastante popular é o
+              <strong>Linux Mint</strong>. Esta distribuição é baseada no
+              <strong>Ubuntu</strong> e foi criada com o objetivo de oferecer
+              uma experiência simples e familiar, especialmente para
+              utilizadores que vêm do <strong>Windows</strong>.
+            </p>
+
+            <p class="mb-1">
+              O <strong>Debian</strong> é outra distribuição muito importante no
+              mundo do <strong>Linux</strong>. É conhecido pela sua grande
+              estabilidade e serve como base para muitas outras distribuições,
+              incluindo o próprio <strong>Ubuntu</strong>.
+            </p>
+
+            <p class="mb-1">
+              Existe também o <strong>Fedora</strong>, uma distribuição moderna
+              que costuma incluir tecnologias recentes do mundo
+              <strong>Linux</strong>. É frequentemente utilizada por
+              programadores e utilizadores mais avançados.
+            </p>
+
+            <p class="mb-1">
+              Estas são apenas algumas das muitas
+              <strong>distribuições Linux</strong> disponíveis. No entanto, para
+              quem está a começar, é geralmente recomendado escolher uma
+              distribuição simples e bem documentada.
+            </p>
+          </article>
+          <hr />
+
+          <h4 class="mb-0">2.4. Como escolher uma distribuição</h4>
+
           <p class="mb-1">
-            Este <strong>guia sobre Linux e Ubuntu</strong> foi criado para
-            ajudar qualquer pessoa a compreender e começar a utilizar o
-            <strong>sistema operativo Linux</strong> de forma simples e
-            prática. Muitas pessoas têm curiosidade sobre o
-            <strong>Linux</strong>, mas não sabem por onde começar. Este livro
-            procura responder a essa necessidade, explicando passo a passo os
-            conceitos essenciais e mostrando como instalar e utilizar o
-            <strong>Ubuntu</strong>, uma das distribuições Linux mais
-            populares do mundo.
-          </p>
-          <p class="mb-1">
-            Ao longo deste guia serão apresentados os conceitos fundamentais
-            sobre <strong>Linux</strong>, desde o que é um
-            <strong>sistema operativo</strong> até ao processo completo de
-            <strong>instalação do Ubuntu</strong> num computador. Também serão
-            abordados os primeiros passos após a instalação, a utilização do
-            <strong>ambiente gráfico</strong>, a instalação de
-            <strong>programas</strong>, a gestão de
-            <strong>ficheiros</strong> e uma introdução ao
-            <strong>terminal</strong>. O objetivo é permitir que qualquer
-            leitor consiga começar a utilizar <strong>Linux</strong> com
-            confiança.
-          </p>
-          <p class="mb-1">
-            Este guia foi escrito com uma abordagem prática e pedagógica. Cada
-            capítulo apresenta explicações claras, exemplos e orientações que
-            ajudam a compreender melhor o funcionamento do
-            <strong>Linux</strong>. Mesmo que nunca tenha utilizado este
-            sistema antes, poderá acompanhar os conteúdos sem dificuldade.
-          </p>
-          <p class="mb-0">
-            O mundo do <strong>software livre</strong> é vasto e cheio de
-            possibilidades. Ao aprender a utilizar <strong>Linux</strong>,
-            está também a entrar num ecossistema tecnológico baseado na
-            <strong>colaboração</strong>, na
-            <strong>partilha de conhecimento</strong> e na liberdade de
-            utilizar e modificar o <strong>software</strong>. Este guia
-            pretende ser o primeiro passo nessa descoberta.
-          </p>
-          <p>
-            Esperamos que este livro o ajude a compreender melhor o
-            <strong>Linux</strong>, a instalar o <strong>Ubuntu</strong> no
-            seu computador e a sentir-se confortável ao utilizar este poderoso
-            <strong>sistema operativo</strong>.
-          </p>
-        </article>
-        <hr>
-        <article>
-          <h4 class="mb-0">1. Introdução ao guia</h4>
-          <p class="mb-1">
-            Este guia foi criado para servir como uma
-            <strong>introdução prática ao Linux</strong>, especialmente para
-            pessoas que nunca utilizaram este sistema operativo. Muitas vezes,
-            quem ouve falar em <strong>Linux</strong> pensa que se trata de
-            algo complicado ou destinado apenas a especialistas em
-            informática. No entanto, atualmente existem distribuições Linux,
-            como o <strong>Ubuntu</strong>, que são muito fáceis de utilizar.
-          </p>
-          <p class="mb-1">
-            O objetivo deste guia é explicar, de forma simples e organizada,
-            como funciona o <strong>Linux</strong> e como qualquer pessoa pode
-            instalá-lo e utilizá-lo no seu computador. O conteúdo foi
-            estruturado em várias partes, começando pelos conceitos mais
-            básicos e avançando gradualmente para temas mais práticos.
-          </p>
-          <p class="mb-1">
-            Ao longo do livro, o leitor irá aprender não apenas a instalar o
-            <strong>Ubuntu</strong>, mas também a compreender como funciona um
-            <strong>sistema operativo</strong>, como instalar
-            <strong>programas</strong>, como gerir
-            <strong>ficheiros</strong> e como utilizar o
-            <strong>terminal</strong>. Este conhecimento permite utilizar o
-            computador de forma mais eficiente e compreender melhor o
-            funcionamento do sistema.
-          </p>
-        </article>
-        <hr>
-        <article>
-          <h4 class="mb-0">2. A quem se destina este livro</h4>
-          <p class="mb-1">
-            Este livro foi pensado principalmente para
-            <strong>utilizadores iniciantes</strong> que desejam aprender a
-            utilizar <strong>Linux</strong> pela primeira vez. Não é
-            necessário ter conhecimentos avançados de informática para
-            acompanhar este guia. Basta ter alguma familiaridade básica com a
-            utilização de um <strong>computador</strong>.
-          </p>
-          <p class="mb-1">
-            Também pode ser útil para utilizadores que já utilizam sistemas
-            como
-            <strong>Windows</strong> ou <strong>macOS</strong> e querem
-            experimentar o <strong>Linux</strong>. Muitos leitores procuram
-            uma alternativa gratuita, segura e estável para o seu sistema
-            atual, e o <strong>Ubuntu</strong> pode ser uma excelente escolha.
-          </p>
-          <p class="mb-1">
-            Além disso, este guia pode ser útil para estudantes, curiosos de
-            tecnologia ou qualquer pessoa interessada em compreender melhor o
-            mundo do <strong>software livre</strong> e das
-            <strong>distribuições Linux</strong>.
-          </p>
-        </article>
-        <hr>
-        <article>
-          <h4 class="mb-0">3. O que vai aprender</h4>
-          <p class="mb-1">
-            Ao longo deste guia, o leitor irá adquirir uma compreensão sólida
-            sobre o funcionamento do
-            <strong>Linux</strong> e aprenderá a realizar várias tarefas
-            importantes. Uma das primeiras aprendizagens será compreender o
-            que é um <strong>sistema operativo</strong> e qual é o papel do
-            <strong>Linux</strong> no funcionamento de um computador.
-          </p>
-          <p>
-            Também irá conhecer o conceito de
-            <strong>distribuições Linux</strong> e perceber porque existem
-            tantas opções diferentes. O guia irá explicar como escolher uma
-            distribuição adequada para iniciantes e porque o
-            <strong>Ubuntu</strong> foi escolhido como exemplo principal.
-          </p>
-          <p class="mb-1">
-            Outra parte importante será dedicada ao processo de
-            <strong>instalação do Ubuntu</strong>. O leitor irá aprender como
-            preparar o computador, criar uma
-            <strong>pen USB de instalação</strong>, iniciar o sistema a partir
-            dessa USB e concluir todo o processo de instalação.
-          </p>
-          <p class="mb-1">
-            Depois da instalação, serão apresentados os
-            <strong>primeiros passos no Ubuntu</strong>, incluindo a
-            exploração do <strong>ambiente de trabalho</strong>, a instalação
-            de <strong>programas</strong>, a gestão de
-            <strong>ficheiros</strong> e a utilização do
-            <strong>terminal</strong>. Também serão abordados temas
-            relacionados com <strong>segurança</strong>,
-            <strong>atualizações</strong> e resolução de
-            <strong>problemas comuns</strong>.
-          </p>
-        </article>
-        <hr>
-        <article>
-          <h4 class="mb-0">4. Como utilizar este guia</h4>
-          <p class="mb-1">
-            Este guia foi organizado de forma progressiva, permitindo que o
-            leitor avance passo a passo na aprendizagem do
-            <strong>Linux</strong>. Cada capítulo aborda um tema específico e
-            foi pensado para ser compreendido mesmo por quem está a começar.
-          </p>
-          <p class="mb-1">
-            Recomenda-se que o livro seja lido pela ordem apresentada no
-            índice, pois os conceitos explicados nos primeiros capítulos
-            ajudam a compreender melhor os temas abordados mais à frente. Por
-            exemplo, antes de instalar o
-            <strong>Ubuntu</strong>, é importante compreender o que é uma
-            <strong>distribuição Linux</strong> e como funciona o
-            <strong>arranque do computador</strong>.
-          </p>
-          <p class="mb-1">
-            No entanto, este guia também pode ser utilizado como um
-            <strong>manual de consulta</strong>. Se o leitor já tiver
-            instalado o <strong>Ubuntu</strong>, pode avançar diretamente para
-            os capítulos que explicam como instalar
-            <strong>programas</strong>, gerir <strong>ficheiros</strong> ou
-            utilizar o <strong>terminal</strong>.
-          </p>
-          <p class="mb-1">
-            O mais importante é utilizar este guia como uma ferramenta de
-            aprendizagem. Experimentar, testar e explorar o
-            <strong>Linux</strong> é uma das melhores formas de compreender o
-            seu funcionamento e descobrir todo o potencial deste poderoso
-            <strong>sistema operativo</strong>.
-          </p>
-        </article>
-      </div>
-      <!--Fim-->
-    </section>
-    <!--Parte_I-->
-    <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_I">
-      <div class="my-auto">
-        <header>
-          <h2 class="mb-0">
-            Parte I -
-            <span class="text-primary">Compreender o Linux</span>
-          </h2>
-        </header>
-        <article>
-          <p class="mb-1">
-            Nesta primeira parte do guia vamos começar por compreender os
-            conceitos fundamentais relacionados com o <strong>Linux</strong>.
-            Antes de instalar ou utilizar qualquer sistema, é importante
-            perceber o que ele é, como funciona e qual é o seu papel no
-            funcionamento de um <strong>computador</strong>.
+            Escolher uma <strong>distribuição Linux</strong> pode parecer
+            difícil no início, mas na prática o processo pode ser bastante
+            simples. A primeira coisa a considerar é o nível de experiência do
+            utilizador.
           </p>
 
           <p class="mb-1">
-            Muitas pessoas utilizam diariamente um
-            <strong>sistema operativo</strong>, como
-            <strong>Windows</strong> ou <strong>macOS</strong>, sem pensar
-            muito sobre o que ele realmente faz. No entanto, o sistema
-            operativo é um dos elementos mais importantes de qualquer
-            computador, pois é ele que permite utilizar programas, gerir
-            ficheiros e controlar o hardware.
+            Para quem está a começar, é aconselhável escolher uma distribuição
+            que seja conhecida por ser fácil de instalar e utilizar.
+            Distribuições como o <strong>Ubuntu</strong> ou o
+            <strong>Linux Mint</strong> são frequentemente recomendadas porque
+            possuem uma interface intuitiva e uma grande quantidade de tutoriais
+            disponíveis.
           </p>
 
           <p class="mb-1">
-            Ao longo deste capítulo iremos aprender o que é um
-            <strong>sistema operativo</strong>, o que é o
-            <strong>Linux</strong>, como surgiu e porque se tornou tão
-            importante no mundo da tecnologia. Também iremos conhecer o
-            conceito de <strong>software livre</strong>, perceber o que são as
-            <strong>distribuições Linux</strong> e descobrir onde este sistema
-            é utilizado atualmente.
-          </p>
-        </article>
-        <hr>
-        <article>
-          <h3 class="mb-0">Capítulo 1 - O que é Linux</h3>
-
-          <p class="mb-1">
-            Antes de instalar ou utilizar o <strong>Linux</strong>, é
-            importante compreender o que ele é e como funciona dentro de um
-            <strong>computador</strong>. Muitas pessoas pensam que o Linux é
-            apenas um programa ou uma aplicação, mas na realidade trata-se de
-            algo muito mais fundamental.
+            Outro fator importante é o <strong>hardware</strong> do computador.
+            Alguns computadores mais antigos podem funcionar melhor com
+            distribuições mais leves, enquanto máquinas mais recentes podem
+            executar sistemas mais completos sem dificuldade.
           </p>
 
           <p class="mb-1">
-            O <strong>Linux</strong> faz parte do conjunto de componentes que
-            permitem que um computador funcione corretamente. Ele controla a
-            comunicação entre o <strong>hardware</strong> e o
-            <strong>software</strong>, permitindo que o utilizador execute
-            programas, utilize dispositivos e realize várias tarefas no
-            sistema.
-          </p>
-
-          <p class="m-1">
-            Neste capítulo iremos começar por compreender o que é um
-            <strong>sistema operativo</strong>, pois esse conceito é essencial
-            para perceber o papel do <strong>Linux</strong>. Depois iremos
-            explorar a história do sistema, conhecer o conceito de
-            <strong>software livre</strong> e entender porque existem tantas
-            versões diferentes de <strong>Linux</strong>.
-          </p>
-        </article>
-        <hr>
-        <article>
-          <h4 class="mb-0">1.1. O que é um sistema operativo</h4>
-          <p class="mb-1">
-            Um <strong>sistema operativo</strong> é o programa principal que
-            permite que um <strong>computador</strong> funcione e seja
-            utilizado pelas pessoas. Sem um sistema operativo, o computador
-            não seria capaz de executar programas, mostrar imagens no ecrã ou
-            permitir que o utilizador interaja com a máquina.
+            Também é importante considerar o tamanho da
+            <strong>comunidade</strong> da distribuição. Uma comunidade ativa
+            significa que existem mais <strong>fóruns</strong>,
+            <strong>documentação</strong> e
+            <strong>tutoriais</strong> disponíveis para ajudar em caso de
+            dúvidas ou problemas.
           </p>
 
           <p class="mb-1">
-            O <strong>sistema operativo</strong> funciona como um
-            intermediário entre o <strong>hardware</strong> e o
-            <strong>utilizador</strong>. O hardware inclui todos os
-            componentes físicos do computador, como o
-            <strong>processador</strong>, a <strong>memória</strong>, o
-            <strong>disco rígido</strong>, o <strong>teclado</strong> e o
-            <strong>monitor</strong>. O sistema operativo gere estes
-            componentes e permite que os programas os utilizem.
+            Para este guia, iremos utilizar o <strong>Ubuntu</strong>, pois é
+            uma das distribuições mais populares e mais recomendadas para quem
+            deseja começar a explorar o mundo do <strong>Linux</strong>.
           </p>
-
-          <p class="mb-1">
-            Quando abre um <strong>programa</strong>, como um navegador de
-            internet ou um editor de texto, é o
-            <strong>sistema operativo</strong> que coordena tudo o que
-            acontece em segundo plano. Ele gere a memória, organiza os
-            ficheiros no disco e controla a comunicação entre os diferentes
-            programas.
-          </p>
-
-          <p class="mb-1">
-            Existem vários tipos de <strong>sistemas operativos</strong>.
-            Alguns dos mais conhecidos são o <strong>Windows</strong>, o
-            <strong>macOS</strong> e o <strong>Linux</strong>. Cada um deles
-            tem características próprias, mas todos desempenham a mesma função
-            principal: permitir que o utilizador utilize o computador de forma
-            simples e eficiente.
-          </p>
-        </article>
-        <hr>
-        <article>
-
-          <h4 class="mb-0">1.2. O que é Linux</h4>
-
-          <p class="mb-1">
-            O <strong>Linux</strong> é um tipo de
-            <strong>sistema operativo</strong> que foi criado para ser livre,
-            flexível e adaptável a diferentes tipos de computadores. Ao
-            contrário de alguns sistemas proprietários, o
-            <strong>Linux</strong> pode ser utilizado, estudado e modificado
-            por qualquer pessoa.
-          </p>
-
-          <p class="mb-1">
-            Na realidade, quando se fala em <strong>Linux</strong>, muitas
-            vezes estamos a referir-nos ao <strong>kernel Linux</strong>. O
-            <strong>kernel</strong> é a parte central do sistema operativo
-            responsável por comunicar diretamente com o
-            <strong>hardware</strong> do computador. Ele gere recursos como o
-            <strong>processador</strong>, a <strong>memória</strong> e os
-            dispositivos ligados ao sistema.
-          </p>
-
-          <p class="mb-1">
-            No entanto, para que o sistema seja completo, o
-            <strong>kernel Linux</strong> precisa de ser combinado com outros
-            programas e ferramentas. É essa combinação que forma aquilo que
-            normalmente chamamos de <strong>distribuição Linux</strong>.
-          </p>
-
-          <p class="mb-1">
-            Atualmente, o <strong>Linux</strong> é utilizado em milhões de
-            computadores em todo o mundo. É conhecido por ser um sistema
-            <strong>seguro</strong>, <strong>estável</strong> e muito
-            utilizado em <strong>servidores</strong>, mas também pode ser
-            usado em computadores pessoais.
-          </p>
-        </article>
-        <hr>
-        <article>
-          <h4 class="mb-0">1.3. História do Linux</h4>
-
-          <p class="mb-1">
-            A história do <strong>Linux</strong> começa no início da década de
-            1990. Em 1991, um estudante finlandês chamado
-            <strong>Linus Torvalds</strong> começou a desenvolver um novo
-            <strong>kernel</strong> para computadores pessoais. O objetivo
-            inicial era criar um sistema semelhante ao <strong>Unix</strong>,
-            mas que pudesse ser utilizado livremente.
-          </p>
-
-          <p class="mb-1">
-            Linus Torvalds partilhou o seu trabalho na internet e convidou
-            outros programadores a colaborar no desenvolvimento do projeto.
-            Rapidamente, programadores de várias partes do mundo começaram a
-            contribuir com melhorias, correções e novas funcionalidades.
-          </p>
-
-          <p class="mb-1">
-            Graças a esta colaboração global, o <strong>Linux</strong> evoluiu
-            rapidamente e tornou-se num dos sistemas operativos mais
-            importantes do mundo. Ao longo dos anos, muitas empresas,
-            organizações e programadores independentes contribuíram para o
-            desenvolvimento do sistema.
-          </p>
-
-          <p class="mb-1">
-            Hoje, o <strong>Linux</strong> é utilizado em servidores,
-            computadores pessoais, dispositivos móveis, supercomputadores e
-            até em equipamentos eletrónicos como routers e televisores
-            inteligentes.
-          </p>
-        </article>
-        <hr>
-        <article>
-          <h4 class="mb-0">1.4. ‘Software’ livre e código aberto</h4>
-
-          <p class="mb-1">
-            Uma das características mais importantes do
-            <strong>Linux</strong> é o facto de fazer parte do mundo do
-            <strong>software livre</strong>. Este conceito significa que o
-            <strong>software</strong> pode ser utilizado, estudado, modificado
-            e distribuído livremente.
-          </p>
-
-          <p class="mb-1">
-            O <strong>software livre</strong> baseia-se na ideia de que os
-            utilizadores devem ter liberdade para compreender como um programa
-            funciona e adaptá-lo às suas necessidades. Para isso, o
-            <strong>código-fonte</strong> do programa é disponibilizado
-            publicamente.
-          </p>
-
-          <p class="mb-1">
-            O termo <strong>código aberto</strong>, também conhecido como
-            <strong>open source</strong>, está relacionado com esta filosofia.
-            Programas de <strong>código aberto</strong> permitem que
-            programadores de todo o mundo participem no desenvolvimento,
-            corrigindo erros e criando novas funcionalidades.
-          </p>
-
-          <p class="mb-1">
-            O <strong>Linux</strong> é um dos exemplos mais conhecidos de
-            <strong>software livre</strong> e de
-            <strong>código aberto</strong>. Esta abordagem colaborativa ajudou
-            o sistema a crescer rapidamente e a tornar-se extremamente robusto
-            e confiável.
-          </p>
-        </article>
-        <hr>
-        <article>
-          <h4 class="mb-0">1.5. O que é uma distribuição Linux</h4>
-
-          <p class="mb-1">
-            Uma <strong>distribuição Linux</strong> é uma versão completa do
-            sistema que inclui o <strong>kernel Linux</strong>, programas,
-            ferramentas e um <strong>ambiente gráfico</strong>. Cada distribuição
-            é criada por uma comunidade ou organização que decide quais os
-            componentes a incluir.
-          </p>
-
-          <p class="mb-1">
-            Existem centenas de <strong>distribuições Linux</strong>, cada uma com
-            objetivos e características diferentes. Algumas são pensadas para
-            iniciantes, outras para servidores, e algumas são criadas para
-            utilizadores mais avançados.
-          </p>
-
-          <p class="mb-1">
-            Entre as distribuições mais conhecidas encontram-se o
-            <strong>Ubuntu</strong>, o <strong>Debian</strong>, o
-            <strong>Fedora</strong> e o <strong>Linux Mint</strong>. Todas
-            utilizam o <strong>kernel Linux</strong>, mas podem ter interfaces e
-            ferramentas diferentes.
-          </p>
-
-          <p class="mb-1">
-            Neste guia iremos utilizar o <strong>Ubuntu</strong>, porque é uma das
-            distribuições mais populares e mais fáceis de utilizar para quem está
-            a começar a aprender <strong>Linux</strong>.
-          </p>
-
-        </article>
-        <hr>
-        <article>
-          <h4 class="mb-0">1.6. Onde o Linux é utilizado</h4>
-
-          <p class="mb-1">
-            O <strong>Linux</strong> é utilizado em muitos tipos de dispositivos e
-            sistemas em todo o mundo. Embora muitas pessoas o utilizem em
-            computadores pessoais, a sua presença é muito maior em outras áreas da
-            tecnologia.
-          </p>
-
-          <p class="mb-1">
-            Grande parte dos <strong>servidores de internet</strong> utilizam
-            <strong>Linux</strong>. Isto inclui servidores que alojam websites,
-            serviços online e plataformas digitais. A sua estabilidade e segurança
-            tornam-no uma escolha popular para empresas e organizações.
-          </p>
-
-          <p class="mb-1">
-            O <strong>Linux</strong> também é utilizado em
-            <strong>supercomputadores</strong>, que são máquinas extremamente
-            poderosas usadas em investigação científica e simulações complexas.
-          </p>
-
-          <p class="mb-1">
-            Além disso, muitos dispositivos do dia a dia utilizam versões
-            adaptadas do <strong>Linux</strong>, como <strong>routers</strong>,
-            <strong>televisores inteligentes</strong> e sistemas operativos móveis
-            como o <strong>Android</strong>.
-          </p>
-        </article>
-        <hr>
-        <article>
-          <h4 class="mb-0">1.7. O papel da comunidade</h4>
-
-          <p class="mb-1">
-            Uma das grandes forças do <strong>Linux</strong> é a sua
-            <strong>comunidade</strong>. Ao contrário de muitos sistemas
-            proprietários, o desenvolvimento do Linux envolve milhares de
-            programadores, utilizadores e voluntários em todo o mundo.
-          </p>
-
-          <p class="mb-1">
-            A <strong>comunidade Linux</strong> contribui para melhorar o sistema
-            de várias formas. Programadores criam novas funcionalidades,
-            especialistas em segurança corrigem vulnerabilidades e utilizadores
-            ajudam a testar novas versões.
-          </p>
-
-          <p class="mb-1">
-            Além disso, a comunidade também produz uma grande quantidade de
-            <strong>documentação</strong>, <strong>tutoriais</strong> e
-            <strong>fóruns de ajuda</strong>. Isto facilita muito a aprendizagem,
-            pois os utilizadores podem encontrar respostas para muitas dúvidas na
-            internet.
-          </p>
-
-          <p class="mb-1">
-            Esta cultura de colaboração e partilha é um dos elementos que tornam o
-            <strong>Linux</strong> um projeto único no mundo da tecnologia.
-          </p>
-
-        </article>
-        <hr>
-        <article>
-          <h4 class="mb-0">1.8. Resumo do capítulo</h4>
-
-          <p class="mb-1">
-            Neste capítulo aprendemos vários conceitos fundamentais para
-            compreender o <strong>Linux</strong>. Começámos por perceber o que é
-            um <strong>sistema operativo</strong> e qual é o seu papel no
-            funcionamento de um <strong>computador</strong>.
-          </p>
-
-          <p class="mb-1">
-            Também descobrimos que o <strong>Linux</strong> é um sistema baseado
-            num <strong>kernel</strong> desenvolvido por
-            <strong>Linus Torvalds</strong> e que evoluiu graças à colaboração de
-            milhares de programadores em todo o mundo.
-          </p>
-
-          <p class="mb-1">
-            Outro conceito importante foi o de <strong>software livre</strong> e
-            <strong>código aberto</strong>, que permite que qualquer pessoa
-            utilize, estude e modifique o <strong>software</strong>.
-          </p>
-
-          <p class="mb-1">
-            Por fim, vimos que existem muitas
-            <strong>distribuições Linux</strong> e que o sistema é utilizado em
-            vários tipos de dispositivos, desde <strong>servidores</strong> até
-            <strong>supercomputadores</strong> e equipamentos eletrónicos.
-          </p>
-
-          <p class="mb-1">
-            No próximo capítulo iremos aprender mais sobre as
-            <strong>distribuições Linux</strong> e descobrir como escolher a mais
-            adequada para começar a utilizar este poderoso
-            <strong>sistema operativo</strong>.
-          </p>
-        </article>
-        <hr>
-      </div>
-      <!--Fim-->
-    </section>
-    <!--parte II-->
-     <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_II">
-      <div class="my-auto">
-        <header>
-          <h2 class="mb-0">
-            Parte II -
-            <span class="text-primary"></span>
-          </h2>
-        </header>
-      </div>
-      <!--Fim-->
-    </section>
-    <!--Parte III-->
-         <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_III">
-      <div class="my-auto">
-        <header>
-          <h2 class="mb-0">
-            Parte III -
-            <span class="text-primary"></span>
-          </h2>
-        </header>
-      </div>
-      <!--Fim-->
-    </section>
-<!--Parte IV-->
-         <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_IV">
-      <div class="my-auto">
-        <header>
-          <h2 class="mb-0">
-            Parte IV -
-            <span class="text-primary"></span>
-          </h2>
-        </header>
-      </div>
-      <!--Fim-->
-    </section>
-    <!--Parte V-->
-         <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_V">
-      <div class="my-auto">
-        <header>
-          <h2 class="mb-0">
-            Parte V -
-            <span class="text-primary"></span>
-          </h2>
-        </header>
-      </div>
-      <!--Fim-->
-    </section>
-    <!--Parte VI-->
-         <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_VI">
-      <div class="my-auto">
-        <header>
-          <h2 class="mb-0">
-            Parte VI -
-            <span class="text-primary"></span>
-          </h2>
-        </header>
-      </div>
-      <!--Fim-->
-    </section>
-    <!--Parte VII-->
-         <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_VII">
-      <div class="my-auto">
-        <header>
-          <h2 class="mb-0">
-            Parte VII -
-            <span class="text-primary"></span>
-          </h2>
-        </header>
-      </div>
-      <!--Fim-->
-    </section>
-    <!--Parte VIII-->
-         <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_VIII">
-      <div class="my-auto">
-        <header>
-          <h2 class="mb-0">
-            Parte III -
-            <span class="text-primary"></span>
-          </h2>
-        </header>
-      </div>
-      <!--Fim-->
-    </section>
-    <!--Conclusao-->
-         <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Conclusao">
-      <div class="my-auto">
-        <header>
-          <h2 class="mb-0">
-            Conclusão -
-            <span class="text-primary"></span>
-          </h2>
-        </header>
-      </div>
-      <!--Fim-->
-    </section>
-    <!--final-->
-  </div>
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <!-- Custom scripts for this template -->
-  <script src="js/resume.min.js"></script>
-</body>
-
+        </div>
+        <!--Fim-->
+      </section>
+      <!--parte II-->
+      <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_II">
+        <div class="my-auto">
+          <header>
+            <h2 class="mb-0">
+              Parte II -
+              <span class="text-primary"></span>
+            </h2>
+          </header>
+        </div>
+        <!--Fim-->
+      </section>
+      <!--Parte III-->
+      <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_III">
+        <div class="my-auto">
+          <header>
+            <h2 class="mb-0">
+              Parte III -
+              <span class="text-primary"></span>
+            </h2>
+          </header>
+        </div>
+        <!--Fim-->
+      </section>
+      <!--Parte IV-->
+      <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_IV">
+        <div class="my-auto">
+          <header>
+            <h2 class="mb-0">
+              Parte IV -
+              <span class="text-primary"></span>
+            </h2>
+          </header>
+        </div>
+        <!--Fim-->
+      </section>
+      <!--Parte V-->
+      <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_V">
+        <div class="my-auto">
+          <header>
+            <h2 class="mb-0">
+              Parte V -
+              <span class="text-primary"></span>
+            </h2>
+          </header>
+        </div>
+        <!--Fim-->
+      </section>
+      <!--Parte VI-->
+      <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_VI">
+        <div class="my-auto">
+          <header>
+            <h2 class="mb-0">
+              Parte VI -
+              <span class="text-primary"></span>
+            </h2>
+          </header>
+        </div>
+        <!--Fim-->
+      </section>
+      <!--Parte VII-->
+      <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_VII">
+        <div class="my-auto">
+          <header>
+            <h2 class="mb-0">
+              Parte VII -
+              <span class="text-primary"></span>
+            </h2>
+          </header>
+        </div>
+        <!--Fim-->
+      </section>
+      <!--Parte VIII-->
+      <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Parte_VIII">
+        <div class="my-auto">
+          <header>
+            <h2 class="mb-0">
+              Parte III -
+              <span class="text-primary"></span>
+            </h2>
+          </header>
+        </div>
+        <!--Fim-->
+      </section>
+      <!--Conclusao-->
+      <section class="resume-section p-3 p-lg-5 flex-nowrap" id="Conclusao">
+        <div class="my-auto">
+          <header>
+            <h2 class="mb-0">
+              Conclusão -
+              <span class="text-primary"></span>
+            </h2>
+          </header>
+        </div>
+        <!--Fim-->
+      </section>
+      <!--final-->
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+  </body>
 </html>
