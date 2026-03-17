@@ -1,6 +1,6 @@
 # Ubuntu Passo a Passo
 
-**Ubuntu Passo a Passo** é um guia gratuito criado para ajudar qualquer pessoa a começar a utilizar Linux de forma simples e prática.
+**linux com Ubuntu** é um guia gratuito criado para ajudar qualquer pessoa a começar a utilizar Linux de forma simples e prática.
 
 Este projeto foi pensado especialmente para iniciantes que nunca utilizaram Linux ou que pretendem mudar de outros sistemas operativos. O objetivo é explicar os conceitos fundamentais e mostrar, passo a passo, como instalar, configurar e utilizar o sistema no dia a dia.
 
