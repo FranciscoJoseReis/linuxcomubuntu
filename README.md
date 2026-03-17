@@ -1,4 +1,4 @@
-# Ubuntu Passo a Passo
+# linux com Ubuntu
 
 **linux com Ubuntu** é um guia gratuito criado para ajudar qualquer pessoa a começar a utilizar Linux de forma simples e prática.
 
